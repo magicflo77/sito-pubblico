@@ -9,10 +9,10 @@
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>CENTROSPED S.R.L. Spedizioni Internazionali Brescia</title>
-	<meta name="description" content ="Centrosped opera da pi� di 20 anni nel settore 
+	<meta name="description" content ="Centrosped opera da pi&ugrave; di 20 anni nel settore 
 	delle spedizioni internazionali, cura l'organizzazione dei trasporti via aerea e via mare, 
-	offre tutta la serie di servizi correlati all'import-export. Si � specializzata nell'area caraibica 
-	dove � responsabile dei trasporti, dell'organizzazione delle fiere e delle donazioni per Cuba da tutta Italia.">
+	offre tutta la serie di servizi correlati all'import-export. Si &egrave; specializzata nell'area caraibica 
+	dove &egrave; responsabile dei trasporti, dell'organizzazione delle fiere e delle donazioni per Cuba da tutta Italia.">
 	<meta name="keywords" content="spedizioni internazionali,spedizioni cuba,spedizioni internazionali brescia,spedizioni internazionali cuba,
 	merci pericolose,trasporto merci pericolose,consulenza merci pericolose,donazioni cuba,trasporti cuba,fiere cuba,trasporti extracee,iata">
 	<meta name="author" content="Corrado Floreancigh">
@@ -21,13 +21,17 @@
     <!-- Mobile viewport optimized: j.mp/bplateviewport -->
  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-   
+     
    
    <!-- JavaScript -->
    <script src="js/modernizr-1.7.min.js"></script>
    <script src="js/jquery-1.7.1.min.js"></script>
    <script src="js/jquery.flexslider-min.js"></script>
    
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+
    <script>
   	$(document).ready(function(){   
 	    
@@ -40,7 +44,22 @@
 
 			});
 
-		
+		//Slider
+	$(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+
+
+
+
+        }
+      });
+    });
+      
+      
+
 			
 			// When resize
 			$(window).resize(function () {
@@ -51,17 +70,12 @@
 				}
 			});
 	
+        
+
 	});
 	
-	//Slider
-	$(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
+	
+    
 	
    </script>
 
@@ -265,7 +279,7 @@
     	</aside> <!-- #sidebar -->
     
 	</div> <!-- #main -->
-
+    
 
  	<footer id="footer">
       

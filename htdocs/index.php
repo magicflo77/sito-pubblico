@@ -9,10 +9,10 @@
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>CENTROSPED S.R.L. Spedizioni Internazionali Brescia</title>
-	<meta name="description" content ="Centrosped opera da più di 20 anni nel settore 
+	<meta name="description" content ="Centrosped opera da pi&ugrave; di 20 anni nel settore 
 	delle spedizioni internazionali, cura l'organizzazione dei trasporti via aerea e via mare, 
-	offre tutta la serie di servizi correlati all'import-export. Si è specializzata nell'area caraibica 
-	dove è responsabile dei trasporti, dell'organizzazione delle fiere e delle donazioni per Cuba da tutta Italia.">
+	offre tutta la serie di servizi correlati all'import-export. Si &egrave; specializzata nell'area caraibica 
+	dove &egrave; responsabile dei trasporti, dell'organizzazione delle fiere e delle donazioni per Cuba da tutta Italia.">
 	<meta name="keywords" content="spedizioni internazionali,spedizioni cuba,spedizioni internazionali brescia,spedizioni internazionali cuba,
 	merci pericolose,trasporto merci pericolose,consulenza merci pericolose,donazioni cuba,trasporti cuba,fiere cuba,trasporti extracee,iata">
 	<meta name="author" content="Corrado Floreancigh">
@@ -40,7 +40,22 @@
 
 			});
 
-		
+            //Slider
+            $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider){
+                $('body').removeClass('loading');
+                }
+            });
+
+            $('#divModalCookies').fadeIn(500,function() 
+                            {
+                               
+                                $("#overlay").show().css({"opacity": "0.5"}).css({"z-index": "4"});
+                            })
+
+            });
 			
 			// When resize
 			$(window).resize(function () {
@@ -50,20 +65,99 @@
 					$("#mainmenu").hide();
 				}
 			});
+
+            $('#btnAccediCuba').on("touchend click",function(e) {
+        e.preventDefault();
+        window.location.href="https://www.centrosped-cuba.it";
+
+        
+        })
+
+        $('#btnContinuaCS').on("click",function(e){
+            e.preventDefault();
+            
+            $('#divModalCookies').fadeOut(300,function() {
+                localStorage.setItem("cookieSeen","shown");
+                $("#overlay").fadeOut(200);
+            })
+        });
+
+        /* $('#btnFacebook').on("touchend click",function(e) {
+            e.preventDefault();
+            window.location.href="https://www.facebook.com/profile.php?id=100090809625954";
+        })
+
+        $('#btnInstagram').on("touchend click",function(e) {
+            e.preventDefault();
+            window.location.href="https://www.instagram.com/centrosped/";
+        }) */
 	
 	});
 	
-	//Slider
-	$(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
+	
 	
    </script>
+
+<style>
+    .modale {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 99;
+        /* Sit on top */
+        padding-top: 140px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 90%;
+        /* Full width */
+        height: 100%;
+        max-height: 98Vh;
+        margin: 5%;
+        /* Full height */
+        overflow: auto;
+       
+    }
+    /* Modal Content */
+    
+    .modale-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #888;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 1200px;
+        height: 93%;
+        overflow: auto;
+    }
+    /* The Close Button */
+    
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    div.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        
+        padding: 10px;
+        
+      }
+
+</style>
 
     <!-- Style -->
     <link href="style.css" rel="stylesheet" />
@@ -113,6 +207,9 @@
 	</div> <!-- #mainmenu -->
 	<div style="float: right; margin-top: 5px; margin-right: 20px">
 		<a href="#navi" style="font-size: 13px; text-decoration: underline;">Partenze Navi<img src='img/ico_boat.png' style='margin-left: 4px;vertical-align: middle' /></a>
+        &nbsp;&nbsp;
+        <a href="#aerei" style="font-size: 13px; text-decoration: underline;">Partenze Aeree<img src='img/ico_flight.png' style='margin-left: 4px;vertical-align: middle' /></a>
+        &nbsp;&nbsp;
 	</div>
     <div id="lang">
 			
@@ -158,7 +255,7 @@
             <div class="entry-content"><a name="navi" href="#"></a>
             
             <span style="font-size: 18px; color: darkblue; margin-right: 10px;">PROSSIME PARTENZE NAVI</span>
-			<img src="img/melfi.png" style="height: 50px; vertical-align: middle" />
+			<img src="img/hapag-lloyd-big.png" style="height: 50px; vertical-align: middle" />
             </div>
             <div class="entry-content">
 			<?php
@@ -170,16 +267,44 @@
 				
 				foreach($fog as $zz => $linea) 
 				{ // $zz ci indica in quale elemento dell'array siamo
-					list ($nave, $livcari, $livpart, $gencari, $genpart) = explode(';', $linea);
+					list ($nave, $livcari, $livpart, $gencari, $genpart, $cubarri) = explode(';', $linea);
 					echo "<b>Nave: $nave</b>";
 					if ($livcari!="") 
 					{
-						echo "<br /><span style='font-size: 14px'>Livorno (CUT OFF $livcari  ETA $livpart)</span>";
+						echo "<br /><span style='font-size: 14px'>Napoli (CUT OFF $livcari  ETA $livpart) Mariel arrivo $cubarri</span>";
 					}
 					if ($gencari!="") 
 					{
-						echo "<br /><span style='font-size: 14px'>Genova  (CUT OFF $gencari  ETA $genpart)</span>";
+						echo "<br /><span style='font-size: 14px'>Genova (CUT OFF $gencari  ETA $genpart) Mariel arrivo $cubarri</span>";
 					}
+					echo "<br />";
+				}
+				}
+				
+			?>
+			</div>
+            <div class="entry-content"><a name="aerei" href="#"></a>
+            
+            <span style="font-size: 18px; color: darkblue; margin-right: 10px;">PROSSIME PARTENZE AEREE</span>
+			<img src="img/Neos_Logo.png" style="height: 50px; vertical-align: middle" />
+            </div>
+            <div class="entry-content">
+			<?php
+				if (file_exists("partenzeA.txt"))
+				{
+								
+				$fileaerei="partenzeA.txt";
+				$fog=file($fileaerei);
+				
+				foreach($fog as $zz => $linea) 
+				{ // $zz ci indica in quale elemento dell'array siamo
+					list ($volo, $tratta, $milpart, $orapart, $cubarri, $oraarri) = explode(';', $linea);
+					echo "<b>Volo: $volo</b>";
+					if ($volo!="") 
+					{
+						echo "<br /><span style='font-size: 14px'>Tratta $tratta (PARTENZA $milpart $orapart - ARRIVO HAV $cubarri $oraarri)</span>";
+					}
+					
 					echo "<br />";
 				}
 				}
@@ -299,7 +424,39 @@
     	</aside> <!-- #sidebar -->
     
 	</div> <!-- #main -->
-
+    <div id="divModalCookies" class="modale" style="padding-top:5vh!important; margin: 0; width: 100%">
+        <div class="modale-content" style="background: black;  width: 800px; max-width: 95%; border-radius: 4px; border: 1px solid darkgray; height:auto; opacity:0.98">
+            
+            
+                <div style="clear: both; height:10px"></div>
+            
+                <div>
+                    <div style="text-align: center; opacity: 0.85; width: 90%; margin: auto; line-height: 24px; text-transform:none!important; margin-top: 40px">
+                        <p style="font-weight: 700; font-size: 24pt;color: white">Nuovo servizio spedizioni a Cuba per privati
+                        </p>
+                        <img src="img/cuba-flag-lowres.gif" style="height: 212px; margin: 40px auto" />
+                        <div style='height: 12px; clear: both'></div>
+                        
+                            
+                            <p style="color: white; font-size: 14pt; line-height: 1.4em;">
+                                Dal 22 maggio in linea il nostro portale per l'invio merce a Cuba per i privati.
+                                <br /><br />Clicca su 'Accedi' per accedere al portale.
+                            <br /> <br />
+                            
+                        </p>
+                    </div>
+                        <button id="btnAccediCuba" class="btn" style="font-size: 16pt; cursor: pointer; float: left; margin: 40px; margin-left: 80px; padding: 15px">Accedi</button>
+                        <button id="btnContinuaCS" class="btn" style="font-size: 16pt; cursor: pointer; float: right; margin: 40px; padding: 15px">Continua su Centrosped.it</button>
+                        <div style="height: 10px; clear: both"></div>
+                        <div style="text-align: center">
+                        <a href="https://www.facebook.com/profile.php?id=100090809625954" data-ignore="push" target="_blank" alt="facebook" title="visita la nostra pagina facebook"><img id="btnFacebook" src="img/logo-facebook.png" title="visita la nostra pagina facebook" alt="facebook" style="height: 64px; cursor: pointer; margin-right: 20px" /></a>
+                        <a href="https://www.instagram.com/centrosped/" data-ignore="push" target="_blank" alt="instagram" title="visita la nostra pagina instagram"><img id="btnInstagram" src="img/logo-instagram.png" title="visita la nostra pagina instagram" alt="instagram" style="height: 64px; cursor: pointer;"/></a>
+                        </div>
+                        <div style="height: 20px; clear: both"></div>
+                </div>
+            </div>
+    
+    </div>
 
  	<footer id="footer">
       
