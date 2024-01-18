@@ -1,0 +1,89 @@
+@media (min-width: 1200px) {
+
+	/* Structure > 1200px */
+	#wrapper 		{width: 1170px;margin: 0 auto;}
+	#header 		{width: 1130px;float:left;padding: 20px 20px 20px 20px;} 
+	#mainmenu		{width: 100%;float:left;}
+	#main 			{width: 1130px;float:left;padding: 20px 20px 20px 20px;}
+	#content 		{width: 670px;float:left;}
+	#sidebar 		{width: 420px;float:right;}
+	#footer			{width: 1130px;float:left;padding: 30px 20px 10px 20px;}
+	#mainmenu		{display:block;}
+	#mainmenu a		{padding-right: 85px}
+	.widget-single .details {font-weight: normal;font-size: 16px;}
+}
+
+@media (min-width: 981px) and  (max-width: 1199px)
+{
+
+	
+	#mainmenu a		{padding-right: 50px}
+}
+@media (min-width: 768px) and (max-width: 980px) {
+
+	/* Structure 768 to 1000 */
+	#wrapper 		{width: 748px;margin: 0 auto;}
+	#header 		{width: 708px;float:left;padding: 20px 20px 20px 20px;} 
+	#mainmenu		{width: 100%;float:left;}
+	#main 			{width: 708px;float:left;padding: 20px 20px 20px 20px;}
+	#content 		{width: 470px;float:left;}
+	#sidebar 		{width: 210px;float:right;}
+	#footer			{width: 708px;float:left;padding: 30px 20px 10px 20px;}
+	#mainmenu		{display:block;}
+	.search{margin-top: -20px;}
+	#mainmenu a		{padding-right: 20px}
+}
+
+
+@media (max-width: 784px) {
+.btn-responsive-menu{display:block;}
+	#mainmenu			{display:none;}
+	.search{float: left;margin-left: 35px;}
+}
+
+
+@media (max-width: 767px) {
+
+	/* Structure  < 767 */
+	body{padding:10px;background:#fff;}
+	#wrapper 		{width:100%;margin: 0 auto;}
+	#header 		{width:100%;padding: 20px 0 20px 0px;} 
+	#mainmenu		{width:100%;float:left;}
+	#main 			{width:100%;float:left;padding: 20px 0 0 0;}
+	#content 		{width:100%;float:left;}
+	#sidebar 		{width:100%;float:right;padding: 20px 0 0 0px;}
+	#footer			{width:100%;float:left;padding: 10px 0 0 0px;}
+	
+	/* Header */
+ 	 	
+	.btn-responsive-menu{display:block;}
+	#mainmenu			{display:none;}
+	#mainmenu ul li 	{float: none;}	
+	
+	/* Sidebar */
+	/*.widget{width:48%;float:left;}*/
+	/*.widget:first-child{margin-right:4%;!important}*/
+	.widget-single{width: 100%; float: left}
+	
+	#site-title a {font-size:25px;margin-left:10px;}
+	#footer p     {margin-left:10px;}
+		
+}
+
+@media (max-width: 540px) {
+	#content .second {float: none; clear: both; margin-left: 0px; margin-top: 0px; margin-bottom: 5px;}
+	.search{display:none;}
+}
+
+
+@media (max-width: 394px) 
+{
+    
+    div #titolo {padding-left: 0px;}
+}
+
+@media (max-width: 371px)
+{
+	div #logo {display: none}
+}
+

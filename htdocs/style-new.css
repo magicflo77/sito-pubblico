@@ -1,0 +1,70 @@
+/*stili per il layout fisso con posizionamenti assoluti*/
+html,body{margin: 0;padding:0; line-height: 1.2em}
+body{font-family: arial,sans-serif;font-size: 76%;text-align: center}
+div#container{position:relative; width: 780px;margin: 0 auto;text-align: left;
+    border-left: 1px solid black;border-right: 1px solid black;
+    border-top: 1px solid black;border-bottom: 1px solid black;background-color: black}
+
+/*stili generici, su header e footer*/
+
+div#header{background-image: url(img\intestazione.jpg);background-repeat:no-repeat;color: white}
+div#content{background-image: url(img\background.jpg);background-repeat:no-repeat;color: black}
+
+div#content a{text-decoration: none; color: black}
+div#content a.testo{text-decoration: underline; font: bold 1em; color: darkred}
+
+div#content a#link{text-decoration: none; color: black}
+
+
+h1,h2,h3,h4,h5{margin: 0;padding:0}
+h1{padding-left:0.5em;font: bold 2.3em/90px arial,serif}
+h2{color: darkred;font-size: 1.5em; text-align: center;text-decoration: underline}
+h3{color: black; font-size: 1.2em; text-align: center}
+h4{color: darkblue; font: bold 1em; text-align: left}
+h5{color: black; font: normal 1em; text-align: left}
+
+p{color: black;font: normal 1em;line-height: 1.2}
+span:{color: darkblue; font: bold 1em; line-height: 1.2}
+div#footer a{color: darkblue;font-weight: bold;text-decoration: underline}
+
+
+/*stili specifici per il layout*/
+div#header{height: 145px}
+div#navigation{
+position: absolute;
+top: 145px;
+left: 0px;
+width: 139px;
+}
+
+div#content{margin-left: 140px;height: 400px;padding-left: 60px;padding-top: 40px; padding-right: 60px}
+div#footer{text-align:center; padding: 0.5em;
+    background-color: lightyellow; color: black}
+div#navigation{text-align: center; background-color: blue}
+/*stili per la navigazione*/
+div#navigation a{display: block; position: absolute; outline: none;}
+div#navigation a.menu{width: 75px; height: 10px; left: 20px;}
+div#navigation a#link1{
+top: 7px;
+}
+div#navigation a#link2{
+top: 37px;
+}
+div#navigation a#link3{
+top: 67px;
+}
+div#navigation a#link4{
+top: 97px;
+}
+div#navigation a#link5{
+top: 127px;
+}
+div#navigation a#link6{
+top: 157px;
+}
+div#navigation a#link7{
+top: 187px;
+}
+
+div#navigation img{margin: 1.3em 1em 1em 1em;padding: 0; border:1px solid black;}
+

@@ -1,0 +1,4 @@
+# General
+User-agent: *
+Disallow: /speds/
+Sitemap: http://www.centrosped.it/sitemap.xml

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Moduli.exe" version="1.0.0.6" publicKeyToken="92642565c4eced9e" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Moduli" version="2.0.5.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="Moduli.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" ID="Custom" SameSite="site" Unrestricted="true" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- Opzioni manifesto Controllo account utente
+            Se si desidera modificare il livello di Controllo account utente di Windows, sostituire il 
+            nodo requestedExecutionLevel con uno dei seguenti.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Se si specifica il nodo requestedExecutionLevel, la virtualizzazione dei file system e del Registro di sistema verrà disabilitata.
+            Se si desidera utilizzare la virtualizzazione dei file e del Registro di sistema per la 
+            compatibilità con le versioni precedenti, eliminare il nodo requestedExecutionLevel.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Generale.dll" size="24064">
+      <assemblyIdentity name="Generale" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qhshwbLKJqbSpv+jlA4B8uz1dsk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.Microsoft.Office.Interop.Word.dll" size="933888">
+      <assemblyIdentity name="Interop.Microsoft.Office.Interop.Word" version="8.6.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>deEUoMu9YJdQMJ1qTtsW7dcgDbk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Moduli.exe" size="15452672">
+      <assemblyIdentity name="Moduli" version="2.0.5.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>fNbQXynWHeWb9FKKbEOvd5K7Orw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Moduli.exe.config" size="2216">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fc9/fzWqQRAeg35IpIuKA6cauj8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Elenco di tutte le versioni di Windows con cui è possibile utilizzare l'applicazione. L'ambiente maggiormente compatibile verrà scelto automaticamente.-->
+      <!-- Se l'applicazione è progettata per l'uso con Windows 7, rimuovere il commento dal seguente nodo supportedOS-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=Datimedia-PC\Datimedia" issuerKeyHash="3c288dc38a74c9198a2f368d622732f5625b097c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>H65bzKhtXDXBCYY9xqEcEwhPmnw=</DigestValue></Reference></SignedInfo><SignatureValue>WOeVbYzYRXf9LyIYC9tsSScy3kF28NNyw7jCL6UwcbsczCLQHvK6FE8s0RQNnWKbPgd/Dm3wYZTdzNGDWe/y+SvTnENbx6Hg9BIzUgJkOpykVe8Du5VyJ/9Jg4uAWNUQdVbTIbwyzS1FLSX2o4mT4M/p9UR5egbLil/cJMSQ6GU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>yrsA++RSbXuN16T/1wvwqIYk2JqhxVjKOjL6OJUMCUeDIXneEjC4vbYpp46UJP53tJnJv6gSspF/IbnpLu42WxwToVpC21wOfNGWIE07EcMFoBpO8Rm32e9PukivPKDY6qlLh+Rk5Y7gYLlMTvs19jkj5HeS75Yd4bSEAL3XJyc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7c9a4f08131ca1c63d8609c1355c6da8cc5bae1f" Description="" Url=""><as:assemblyIdentity name="Moduli.exe" version="1.0.0.6" publicKeyToken="92642565c4eced9e" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Datimedia-PC\Datimedia</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>8SfTZU8mt3vLBmT6g7+/4W9JiRE=</DigestValue></Reference></SignedInfo><SignatureValue>Bvlkp6R0TSFniRZPAG/NSOFn7QSoC1M8sVIVNkfAnsNqqsp8FJkU259r6zwaXgYB6MowalJwz8YjTrPRHz5O4EYqtHDvG96SxOPzK+/t9Mn4fLwuZrBBi2xFLvu5rCF+izoQMWpiJb0Q7emOHOtSVxForBWH6/Bkq0aNsVP4/OM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>yrsA++RSbXuN16T/1wvwqIYk2JqhxVjKOjL6OJUMCUeDIXneEjC4vbYpp46UJP53tJnJv6gSspF/IbnpLu42WxwToVpC21wOfNGWIE07EcMFoBpO8Rm32e9PukivPKDY6qlLh+Rk5Y7gYLlMTvs19jkj5HeS75Yd4bSEAL3XJyc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQFUYLtlruELVKs1IulYs/oTANBgkqhkiG9w0BAQUFADA3MTUwMwYDVQQDHiwARABhAHQAaQBtAGUAZABpAGEALQBQAEMAXABEAGEAdABpAG0AZQBkAGkAYTAeFw0xNjA0MDExNzAyMzVaFw0xNzA0MDEyMzAyMzVaMDcxNTAzBgNVBAMeLABEAGEAdABpAG0AZQBkAGkAYQAtAFAAQwBcAEQAYQB0AGkAbQBlAGQAaQBhMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKuwD75FJte43XpP/XC/CohiTYmqHFWMo6Mvo4lQwJR4Mhed4SMLi9timnjpQk/ne0mcm/qBKykX8hueku7jZbHBOhWkLbXA580ZYgTTsRwwWgGk7xGbfZ70+6SK88oNjqqUuH5GTljuBguUxO+zX2OSPkd5Lvlh3htIQAvdcnJwIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAEEhv3eK7mcziWkEgNgfoXS4s19nuL8ls2UnTlrjECSgYJWThJ88zJ0o1f+CpmnXEDy6kFIieaegtyMLOteaahtGrGzHxKbaLMzkEqBNvzZVI02QCQ+O8DYCa8bWP6qAsQikOcxi2JX2lkolVFvScQfBz00rWDcu8H9jdIMXWhHz</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
